@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kristin Dayton | Founder</title>
+    <title>Kristin Dayton</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 40px 20px; text-align: center; }
-        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .title { color: #666; font-size: 1.1rem; margin-bottom: 2rem; }
-        .contact { margin-top: 2rem; padding: 20px; border-top: 1px solid #eee; }
-        a { color: #007bff; text-decoration: none; }
+        :root { --bg: #0b0e14; --card: #151921; --text: #f0f6fc; --accent: #8ebd9d; }
+        body { background: var(--bg); color: var(--text); font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; text-align: center; }
+        .container { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 40px; max-width: 400px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .tag { color: var(--accent); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; display: block; letter-spacing: 1px; }
+        h1 { margin: 0 0 10px 0; font-size: 1.8rem; }
+        p { color: #8b949e; line-height: 1.6; margin-bottom: 25px; }
+        .btn { display: block; padding: 12px; background: var(--accent); color: #0b0e14; text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.2s; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
     </style>
 </head>
 <body>
-    <h1>Kristin Dayton</h1>
-    <p class="title">Founder @SteadyPathPay</p>
-    <p>Developing secure, AI-audited infrastructure for the future of finance. Focused on GCP, Vertex AI, and High-Fidelity Transactions.</p>
-    
-    <div class="contact">
-        <p>Inquiries: <a href="mailto:daytonkristin@duck.com">daytonkristin@duck.com</a></p>
-        <p><a href="https://github.com/daytonkristin">GitHub Profile</a></p>
+    <div class="container">
+        <span class="tag">Founder @SteadyPathPay</span>
+        <h1>Kristin Dayton</h1>
+        <p>Developing secure, AI-audited financial infrastructure for high-fidelity transactions.</p>
+        <a href="mailto:daytonkristin@duck.com" class="btn">Secure Contact</a>
     </div>
 </body>
 </html>

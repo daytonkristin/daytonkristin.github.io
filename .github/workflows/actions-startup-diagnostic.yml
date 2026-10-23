@@ -1,0 +1,8 @@
+name: Public runner startup diagnostic
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Public runner initialized successfully'

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://daytonkristin.github.io/veriproof/sitemap.xml

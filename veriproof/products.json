@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "brand": "VeriProof Systems",
+  "site_url": "https://daytonkristin.github.io/veriproof/",
+  "support_email": "ailoopguard.support@gmail.com",
+  "products": [
+    {
+      "id": "gem-platform",
+      "name": "gem-platform",
+      "category": "AI ROUTING",
+      "price_usd": 1950,
+      "license_model": "perpetual commercial license",
+      "description": "Standalone Python/FastAPI router with configurable FAST/SAFE inference endpoints, local SQLite event metadata, and offline product-scoped SIG1 Ed25519 license checks. Compatible local models are required for air-gapped operation.",
+      "checkout_url": "https://ailoopguard.gumroad.com/l/gruqi",
+      "public_proof_url": "https://github.com/daytonkristin/gem-platform-proof",
+      "evaluation_note": "Free diagnostic and source-free evaluation ZIP available from the proof repository.",
+      "llms_description": "Standalone Python/FastAPI routing with SQLite event metadata, configurable FAST/SAFE model endpoints, and offline product-scoped SIG1 Ed25519 license verification. A compatible model endpoint is required. Synthetic demo, not measured performance.",
+      "llms_links": [
+        {
+          "label": "Checkout",
+          "url": "https://ailoopguard.gumroad.com/l/gruqi"
+        },
+        {
+          "label": "Public proof",
+          "url": "https://github.com/daytonkristin/gem-platform-proof"
+        },
+        {
+          "label": "Free diagnostic and preview",
+          "url": "https://github.com/daytonkristin/gem-platform-proof/releases/tag/v1.0-proof"
+        }
+      ]
+    },
+    {
+      "id": "SignalIndex",
+      "name": "SignalIndex",
+      "category": "CHANGE EVIDENCE",
+      "price_usd": 2500,
+      "license_model": "perpetual commercial license",
+      "description": "Local-first pricing observation and review with SQLite-backed evidence, operator acceptance, CSV export, and SHA-256 comparison receipts. Hashes establish content change, not vendor authenticity or live price truth.",
+      "checkout_url": "https://ailoopguard.gumroad.com/l/jygsd",
+      "public_proof_url": "https://github.com/daytonkristin/signalindex-proof",
+      "evaluation_note": "Source-free two-URL HTTPS diagnostic and clearly synthetic sample receipt available in the proof repository.",
+      "llms_description": "Local-first source-linked pricing observations, human review, SQLite history, CSV export and SHA-256 comparison receipts. A content hash does not certify a vendor price.",
+      "llms_links": [
+        {
+          "label": "Checkout",
+          "url": "https://ailoopguard.gumroad.com/l/jygsd"
+        },
+        {
+          "label": "Public proof and free two-URL diagnostic",
+          "url": "https://github.com/daytonkristin/signalindex-proof"
+        },
+        {
+          "label": "Synthetic example receipt",
+          "url": "https://github.com/daytonkristin/signalindex-proof/blob/main/sample-receipt.json"
+        }
+      ]
+    }
+  ]
+}

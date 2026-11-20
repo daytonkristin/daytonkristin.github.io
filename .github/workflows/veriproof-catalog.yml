@@ -1,0 +1,44 @@
+name: VeriProof Catalog Deterministic Build
+on:
+  pull_request:
+    paths:
+      - 'veriproof/products.json'
+      - 'veriproof/templates/**'
+      - 'veriproof/build_veriproof_site.py'
+      - 'tests/test_veriproof_builder.py'
+  push:
+    branches: [main]
+    paths:
+      - 'veriproof/products.json'
+      - 'veriproof/templates/**'
+      - 'veriproof/build_veriproof_site.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: veriproof-catalog-main
+  cancel-in-progress: false
+jobs:
+  deterministic-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Rebuild four public assets from the approved product catalog
+        run: python3 veriproof/build_veriproof_site.py
+      - name: Test deterministic generation, links, preserved disclosures
+        run: python3 -m unittest discover -s tests -p 'test_veriproof_builder.py' -v
+      - name: Save generated assets only after an approved catalog change lands on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add veriproof/index.html veriproof/llms.txt veriproof/sitemap.xml veriproof/robots.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "build(veriproof): regenerate public catalog assets"
+            git push origin HEAD:main
+          fi

@@ -1,0 +1,7 @@
+# VeriProof Systems
+> Proof-first self-hosted software by Kristin, Founder. Support: ailoopguard.support@gmail.com.
+
+Canonical storefront: https://daytonkristin.github.io/veriproof/
+
+{{PRODUCT_ENTRIES}}## Disclosure
+Commercial listings are published; no independent security certification, verified customer adoption, or guaranteed cost savings is claimed. Public proof is not proprietary source code.

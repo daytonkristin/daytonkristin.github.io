@@ -9,7 +9,7 @@
       "name": "VeriProof AI Router",
       "category": "AI ROUTING",
       "price_usd": 1950,
-      "license_model": "perpetual commercial license",
+      "license_model": "Commercial Organization Perpetual License",
       "description": "Standalone Python/FastAPI router with configurable FAST/SAFE inference endpoints, local SQLite event metadata, and offline product-scoped SIG1 Ed25519 license checks. Compatible local models are required for air-gapped operation.",
       "checkout_url": "https://ailoopguard.gumroad.com/l/gruqi",
       "public_proof_url": "https://github.com/daytonkristin/gem-platform-proof",
@@ -27,6 +27,10 @@
         {
           "label": "Free diagnostic and preview",
           "url": "https://github.com/daytonkristin/gem-platform-proof/releases/tag/v1.0-proof"
+        },
+        {
+          "label": "Free diagnostic script",
+          "url": "https://github.com/daytonkristin/gem-platform-proof/releases/download/v1.0-proof/verify_gem_compat.py"
         }
       ]
     },
@@ -35,7 +39,7 @@
       "name": "VeriProof Change Monitor",
       "category": "CHANGE EVIDENCE",
       "price_usd": 2500,
-      "license_model": "perpetual commercial license",
+      "license_model": "Commercial Organization Perpetual License",
       "description": "Local-first pricing observation and review with SQLite-backed evidence, operator acceptance, CSV export, and SHA-256 comparison receipts. Hashes establish content change, not vendor authenticity or live price truth.",
       "checkout_url": "https://ailoopguard.gumroad.com/l/jygsd",
       "public_proof_url": "https://github.com/daytonkristin/signalindex-proof",
@@ -53,6 +57,10 @@
         {
           "label": "Synthetic example receipt",
           "url": "https://github.com/daytonkristin/signalindex-proof/blob/main/sample-receipt.json"
+        },
+        {
+          "label": "Free diagnostic script",
+          "url": "https://github.com/daytonkristin/signalindex-proof/blob/main/verify_two_urls.py"
         }
       ]
     }

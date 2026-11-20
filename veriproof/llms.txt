@@ -3,17 +3,19 @@
 
 Canonical storefront: https://daytonkristin.github.io/veriproof/
 
-## VeriProof AI Router — $1,950 perpetual commercial license
+## VeriProof AI Router — $1,950 Commercial Organization Perpetual License
 Standalone Python/FastAPI routing with SQLite event metadata, configurable FAST/SAFE model endpoints, and offline product-scoped SIG1 Ed25519 license verification. A compatible model endpoint is required. Synthetic demo, not measured performance.
 - Checkout: https://ailoopguard.gumroad.com/l/gruqi
 - Public proof: https://github.com/daytonkristin/gem-platform-proof
 - Free diagnostic and preview: https://github.com/daytonkristin/gem-platform-proof/releases/tag/v1.0-proof
+- Free diagnostic script: https://github.com/daytonkristin/gem-platform-proof/releases/download/v1.0-proof/verify_gem_compat.py
 
-## VeriProof Change Monitor — $2,500 perpetual commercial license
+## VeriProof Change Monitor — $2,500 Commercial Organization Perpetual License
 Local-first source-linked pricing observations, human review, SQLite history, CSV export and SHA-256 comparison receipts. A content hash does not certify a vendor price.
 - Checkout: https://ailoopguard.gumroad.com/l/jygsd
 - Public proof and free two-URL diagnostic: https://github.com/daytonkristin/signalindex-proof
 - Synthetic example receipt: https://github.com/daytonkristin/signalindex-proof/blob/main/sample-receipt.json
+- Free diagnostic script: https://github.com/daytonkristin/signalindex-proof/blob/main/verify_two_urls.py
 
 ## Disclosure
 Commercial listings are published; no independent security certification, verified customer adoption, or guaranteed cost savings is claimed. Public proof is not proprietary source code.

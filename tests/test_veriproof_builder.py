@@ -19,7 +19,7 @@ class StorefrontBuildTests(unittest.TestCase):
         catalog=json.loads((ROOT/'veriproof/products.json').read_text())
         table={p['id']:p for p in catalog['products']}
         self.assertEqual(table['gem-platform']['name'],'VeriProof AI Router')
-        self.assertEqual(table['SignalIndex']['name'],'VeriProof SignalIndex')
+        self.assertEqual(table['SignalIndex']['name'],'VeriProof Change Monitor')
         self.assertEqual(table['gem-platform']['price_usd'],1950)
         self.assertEqual(table['SignalIndex']['price_usd'],2500)
         self.assertEqual(table['gem-platform']['checkout_url'],'https://ailoopguard.gumroad.com/l/gruqi')

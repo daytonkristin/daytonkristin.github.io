@@ -9,7 +9,7 @@ Standalone Python/FastAPI routing with SQLite event metadata, configurable FAST/
 - Public proof: https://github.com/daytonkristin/gem-platform-proof
 - Free diagnostic and preview: https://github.com/daytonkristin/gem-platform-proof/releases/tag/v1.0-proof
 
-## VeriProof SignalIndex — $2,500 perpetual commercial license
+## VeriProof Change Monitor — $2,500 perpetual commercial license
 Local-first source-linked pricing observations, human review, SQLite history, CSV export and SHA-256 comparison receipts. A content hash does not certify a vendor price.
 - Checkout: https://ailoopguard.gumroad.com/l/jygsd
 - Public proof and free two-URL diagnostic: https://github.com/daytonkristin/signalindex-proof

@@ -32,7 +32,7 @@
     },
     {
       "id": "SignalIndex",
-      "name": "VeriProof SignalIndex",
+      "name": "VeriProof Change Monitor",
       "category": "CHANGE EVIDENCE",
       "price_usd": 2500,
       "license_model": "perpetual commercial license",

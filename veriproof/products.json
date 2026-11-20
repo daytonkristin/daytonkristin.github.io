@@ -6,7 +6,7 @@
   "products": [
     {
       "id": "gem-platform",
-      "name": "gem-platform",
+      "name": "VeriProof AI Router",
       "category": "AI ROUTING",
       "price_usd": 1950,
       "license_model": "perpetual commercial license",
@@ -32,7 +32,7 @@
     },
     {
       "id": "SignalIndex",
-      "name": "SignalIndex",
+      "name": "VeriProof SignalIndex",
       "category": "CHANGE EVIDENCE",
       "price_usd": 2500,
       "license_model": "perpetual commercial license",

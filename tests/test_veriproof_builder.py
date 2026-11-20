@@ -15,6 +15,16 @@ class StorefrontBuildTests(unittest.TestCase):
         self.assertEqual(products["SignalIndex"]["price_usd"], 2500)
         self.assertEqual(products["gem-platform"]["price_usd"], 1950)
         self.assertEqual(len(products), 2)
+    def test_two_tier_names_preserve_technical_ids_and_prices(self):
+        catalog=json.loads((ROOT/'veriproof/products.json').read_text())
+        table={p['id']:p for p in catalog['products']}
+        self.assertEqual(table['gem-platform']['name'],'VeriProof AI Router')
+        self.assertEqual(table['SignalIndex']['name'],'VeriProof SignalIndex')
+        self.assertEqual(table['gem-platform']['price_usd'],1950)
+        self.assertEqual(table['SignalIndex']['price_usd'],2500)
+        self.assertEqual(table['gem-platform']['checkout_url'],'https://ailoopguard.gumroad.com/l/gruqi')
+        self.assertEqual(table['SignalIndex']['checkout_url'],'https://ailoopguard.gumroad.com/l/jygsd')
+
     def test_catalog_has_all_existing_checkout_and_proof_urls(self):
         catalog = json.loads((ROOT / "veriproof/products.json").read_text())
         links = json.dumps(catalog)

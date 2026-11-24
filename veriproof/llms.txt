@@ -17,5 +17,9 @@ Local-first source-linked pricing observations, human review, SQLite history, CS
 - Synthetic example receipt: https://github.com/daytonkristin/signalindex-proof/blob/main/sample-receipt.json
 - Free diagnostic script: https://github.com/daytonkristin/signalindex-proof/blob/main/verify_two_urls.py
 
+## Assumption Drift & Policy Audit Pilot — $299
+One integration, up to ten documented business rules, private evidence report; synthetic or sanitized inputs only. Scope review required; no live credentials. A free fictional contract check illustrates how passing tests can miss a rule mismatch.
+- Case study, sample and scope request: https://daytonkristin.github.io/veriproof/assumption-drift.html
+
 ## Disclosure
 Commercial listings are published; no independent security certification, verified customer adoption, or guaranteed cost savings is claimed. Public proof is not proprietary source code.

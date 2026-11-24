@@ -1,0 +1,15 @@
+# Crawler preferences, not an access-control mechanism.
+# Search and user-directed retrieval remain permitted by the default group.
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://daytonkristin.github.io/veriproof/sitemap.xml

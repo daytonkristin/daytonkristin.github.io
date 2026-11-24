@@ -65,7 +65,8 @@ def build(data):
       "llms.txt": llms_template.replace("{{PRODUCT_ENTRIES}}","".join(sections)),
       "sitemap.xml": ('<?xml version="1.0" encoding="UTF-8"?>\n'
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-             f'<url><loc>{xml_escape(url)}</loc></url></urlset>\n'),
+             f'<url><loc>{xml_escape(url)}</loc></url>'
+             f'<url><loc>{xml_escape(url)}assumption-drift.html</loc></url></urlset>\n'),
       "robots.txt": f'User-agent: *\nAllow: /\nSitemap: {url}sitemap.xml\n'
     }
 

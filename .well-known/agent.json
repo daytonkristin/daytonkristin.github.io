@@ -65,5 +65,11 @@
     ],
     "verification": "Verify provider-side captured payment, refund and dispute state before release; do not post receipts or private inputs to public issues.",
     "replay": "Return the same authorized result without a second charge."
+  },
+  "rights": {
+    "policy_url": "https://daytonkristin.github.io/veriproof/rights.html",
+    "tdm_reservation": 1,
+    "public_discovery": "permitted subject to applicable rights and platform terms",
+    "license_grant": "No new license grant; existing rights and lawful exceptions preserved"
   }
 }

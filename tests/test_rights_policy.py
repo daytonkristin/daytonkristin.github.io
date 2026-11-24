@@ -26,7 +26,9 @@ class RightsPolicyTests(unittest.TestCase):
         for bot in ('Googlebot','Bingbot','OAI-SearchBot','ChatGPT-User','Claude-User','Perplexity-User'):
             self.assertTrue(p.can_fetch(bot,url),bot)
     def test_tdm_reservation_is_scoped_to_storefront(self):
-        self.assertEqual(json.loads((ROOT/'.well-known/tdmrep.json').read_text()),[{'location':'/veriproof/','tdm-reservation':1}])
+        rules=json.loads((ROOT/'.well-known/tdmrep.json').read_text())
+        self.assertEqual({r['location'] for r in rules},{'/veriproof/','/.well-known/agent.json'})
+        self.assertTrue(all(r['tdm-reservation']==1 for r in rules))
     def test_jekyll_includes_well_known(self):
         self.assertIn('".well-known"',(ROOT/'_config.yml').read_text())
     def test_all_storefront_heads_reserve_tdm_without_claiming_a_timestamp(self):

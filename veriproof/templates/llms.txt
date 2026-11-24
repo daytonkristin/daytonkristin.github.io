@@ -11,3 +11,6 @@ One integration, up to ten documented business rules, private evidence report; s
 
 ## Disclosure
 Commercial listings are published; no independent security certification, verified customer adoption, or guaranteed cost savings is claimed. Public proof is not proprietary source code.
+
+## Rights and evaluation
+All rights reserved to the extent owned or controlled. Public discovery and evaluation do not grant unrestricted reuse or AI training rights. Existing licenses and lawful exceptions remain unaffected. Rights policy: https://daytonkristin.github.io/veriproof/rights.html

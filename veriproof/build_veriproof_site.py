@@ -66,8 +66,11 @@ def build(data):
       "sitemap.xml": ('<?xml version="1.0" encoding="UTF-8"?>\n'
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
              f'<url><loc>{xml_escape(url)}</loc></url>'
-             f'<url><loc>{xml_escape(url)}assumption-drift.html</loc></url></urlset>\n'),
-      "robots.txt": f'User-agent: *\nAllow: /\nSitemap: {url}sitemap.xml\n'
+             f'<url><loc>{xml_escape(url)}assumption-drift.html</loc></url>'
+             f'<url><loc>{xml_escape(url)}rights.html</loc></url></urlset>\n'),
+      "robots.txt": (' # Mirror of the host-root crawler preferences; the root file is authoritative.\n'.lstrip()
+             + 'User-agent: GPTBot\nUser-agent: Google-Extended\nUser-agent: ClaudeBot\nUser-agent: CCBot\nUser-agent: Bytespider\nUser-agent: Amazonbot\nUser-agent: Applebot-Extended\nDisallow: /\n\n'
+             + f'User-agent: *\nAllow: /\nSitemap: {url}sitemap.xml\n')
     }
 
 def launch_drafts(data):

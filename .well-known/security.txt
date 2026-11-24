@@ -1,0 +1,6 @@
+Contact: mailto:ailoopguard.support@gmail.com
+Expires: 2027-11-23T00:00:00Z
+Preferred-Languages: en
+Canonical: https://daytonkristin.github.io/.well-known/security.txt
+Policy: https://daytonkristin.github.io/veriproof/rights.html
+# Contact channel only; no authorization to test or access systems, and no bounty promise.

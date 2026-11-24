@@ -1,0 +1,69 @@
+{
+  "schema": "veriproof-service-discovery-v1",
+  "publisher": "VeriProof Systems",
+  "canonical_site": "https://daytonkristin.github.io/veriproof/",
+  "protocol_disclosure": "Custom static discovery descriptor, not an A2A-compatible endpoint or automatic execution authorization. No live checkout or fulfillment API advertised.",
+  "offers": [
+    {
+      "name": "Assumption Drift & Policy Audit Pilot",
+      "amount_cents": 29900,
+      "currency": "USD",
+      "integrations": 1,
+      "max_rules": 10,
+      "acceptance": "scope_review_required",
+      "inputs": "synthetic or sanitized only",
+      "target_delivery": "five business days after scope acceptance and complete materials",
+      "scope_url": "https://daytonkristin.github.io/veriproof/assumption-drift.html",
+      "contact": "ailoopguard.support@gmail.com",
+      "id": "assumption-drift-audit-pilot",
+      "availability": "scope_review_only",
+      "intake": {
+        "method": "email",
+        "subject": "VERIPROOF AUDIT PILOT",
+        "required_fields": [
+          "integration_name",
+          "non_sensitive_scope_summary"
+        ],
+        "optional_fields": [
+          "sample_reference"
+        ],
+        "private_materials": "transfer method agreed after scope review"
+      },
+      "payment": {
+        "candidate_provider": "Stripe",
+        "checkout_url": null,
+        "status": "not_active_for_this_offer"
+      },
+      "delivery": {
+        "endpoint": null,
+        "automated_live": false,
+        "artifact": "private evidence-backed traceability report, synthetic counterexamples or scoped no-finding result, and recommended regression tests",
+        "transport": "agreed private delivery after acceptance"
+      }
+    }
+  ],
+  "diagnostic": {
+    "url": "https://daytonkristin.github.io/veriproof/assumption-drift-sample.json",
+    "kind": "synthetic_teaching_example",
+    "sample_reference": "VP-AD-SYN-BD33B9C559BDFBDEDED06752",
+    "sha256": "5b74adeb56e4d9c98059f1dc9a60bbc67eef7f1ae0ea3e08edda5587f963d352",
+    "gap_count": 1,
+    "method": "Compare expected_allow and illustrative_allow for every case.",
+    "next_action": "request_scope_review",
+    "disclosure": "Fictional example, not a live defect or security certification. Reference reuse is not proof of unauthorized access. No credentials or sensitive materials by email."
+  },
+  "receipt_policy": {
+    "receipt_id_is_bearer_credential": false,
+    "public_receipt_submission": false,
+    "required_bindings": [
+      "authenticated_buyer",
+      "accepted_scope",
+      "request_sha256",
+      "provider_account",
+      "amount_currency",
+      "unique_payment_id"
+    ],
+    "verification": "Verify provider-side captured payment, refund and dispute state before release; do not post receipts or private inputs to public issues.",
+    "replay": "Return the same authorized result without a second charge."
+  }
+}

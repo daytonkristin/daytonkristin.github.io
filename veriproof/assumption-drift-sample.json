@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "publisher": "VeriProof Systems",
+  "kind": "synthetic_teaching_example",
+  "sample_reference": "VP-AD-SYN-BD33B9C559BDFBDEDED06752",
+  "rule": "Grant access only if payment is confirmed and no refund exists.",
+  "cases": [
+    {
+      "paid": false,
+      "refunded": false,
+      "expected_allow": false,
+      "illustrative_allow": false
+    },
+    {
+      "paid": false,
+      "refunded": true,
+      "expected_allow": false,
+      "illustrative_allow": false
+    },
+    {
+      "paid": true,
+      "refunded": false,
+      "expected_allow": true,
+      "illustrative_allow": true
+    },
+    {
+      "paid": true,
+      "refunded": true,
+      "expected_allow": false,
+      "illustrative_allow": true
+    }
+  ],
+  "live_customer_finding": false,
+  "checkout_active": false,
+  "offer": {
+    "name": "Assumption Drift & Policy Audit Pilot",
+    "amount_cents": 29900,
+    "currency": "USD",
+    "integrations": 1,
+    "max_rules": 10,
+    "acceptance": "scope_review_required",
+    "inputs": "synthetic or sanitized only",
+    "target_delivery": "five business days after scope acceptance and complete materials",
+    "scope_url": "https://daytonkristin.github.io/veriproof/assumption-drift.html",
+    "contact": "ailoopguard.support@gmail.com"
+  },
+  "disclosure": "Fictional example, not a live defect or security certification. Reference reuse is not proof of unauthorized access. No credentials or sensitive materials by email."
+}

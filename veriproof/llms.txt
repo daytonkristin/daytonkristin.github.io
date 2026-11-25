@@ -23,6 +23,13 @@ One integration, up to ten documented business rules, private evidence report; s
 - Machine-readable fictional contract sample: https://daytonkristin.github.io/veriproof/assumption-drift-sample.json
 - Machine-readable service and intake contract: https://daytonkristin.github.io/.well-known/agent.json
 
+## Scoped paid services (human or agent-assisted purchasing)
+Agree scope, availability and a non-sensitive reference with ailoopguard.support@gmail.com before using any checkout. No credentials or private materials in checkout. These are hosted Stripe payment links, not live MPP/x402 endpoints or automatic delivery.
+- Python Defect Diagnosis — $49: https://buy.stripe.com/9B628q9jf6AFbIj2Nh6J200
+- API Integration Diagnosis — $99: https://buy.stripe.com/4gM28qanj9MRh2D4Vp6J201
+- AI Workflow Reliability Assessment — $149: https://buy.stripe.com/28EdR80MJaQV5jV1Jd6J202
+- Assumption Drift & Policy Audit Pilot — $299: https://buy.stripe.com/7sYeVc3YV0ch13F73x6J203
+
 ## Disclosure
 Commercial listings are published; no independent security certification, verified customer adoption, or guaranteed cost savings is claimed. Public proof is not proprietary source code.
 

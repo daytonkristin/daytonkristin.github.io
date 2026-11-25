@@ -22,9 +22,10 @@ class SelectiveDisclosureTests(unittest.TestCase):
                 self.assertFalse(p.can_fetch(bot,POLICY))
             for bot in ('Googlebot','Bingbot','OAI-SearchBot','ChatGPT-User','Claude-SearchBot'):
                 self.assertTrue(p.can_fetch(bot,POLICY))
-    def test_no_checkout_or_sample_mutation(self):
+    def test_scope_gate_and_no_sample_mutation(self):
         a=json.loads((ROOT/'.well-known/agent.json').read_text())
-        self.assertIsNone(a['offers'][0]['payment']['checkout_url'])
+        self.assertTrue(all(o['payment']['scope_agreement_required'] for o in a['offers']))
+        self.assertTrue(all(not o['delivery']['automated_live'] for o in a['offers']))
         self.assertFalse(a['offers'][0]['delivery']['automated_live'])
         self.assertEqual(hashlib.sha256((ROOT/'veriproof/assumption-drift-sample.json').read_bytes()).hexdigest(),'5b74adeb56e4d9c98059f1dc9a60bbc67eef7f1ae0ea3e08edda5587f963d352')
     def test_security_contact_is_not_testing_authorization(self):

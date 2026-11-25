@@ -12,7 +12,8 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(self.manifest['publisher'],'VeriProof Systems')
         self.assertEqual(offer['payment']['candidate_provider'],'Stripe')
         self.assertEqual(offer['availability'],'scope_review_only')
-        self.assertIsNone(offer['payment']['checkout_url'])
+        self.assertEqual(offer['payment']['checkout_url'],'https://buy.stripe.com/7sYeVc3YV0ch13F73x6J203')
+        self.assertEqual(offer['payment']['status'],'live_checkout_after_scope_acceptance')
         self.assertIsNone(offer['delivery']['endpoint'])
         self.assertFalse(offer['delivery']['automated_live'])
     def test_free_diagnostic_is_reproducible_and_bound_to_public_sample(self):
@@ -33,3 +34,24 @@ class ContractTests(unittest.TestCase):
         self.assertNotIn('axiom',raw)
         self.assertNotIn('cs_test_',raw)
         self.assertNotIn('pi_',raw)
+
+    def test_four_live_services_are_discoverable_without_automatic_authority(self):
+        offers=self.manifest['offers']
+        expected={
+          'python-defect-diagnosis':(4900,'https://buy.stripe.com/9B628q9jf6AFbIj2Nh6J200'),
+          'api-integration-diagnosis':(9900,'https://buy.stripe.com/4gM28qanj9MRh2D4Vp6J201'),
+          'ai-workflow-reliability':(14900,'https://buy.stripe.com/28EdR80MJaQV5jV1Jd6J202'),
+          'assumption-drift-audit-pilot':(29900,'https://buy.stripe.com/7sYeVc3YV0ch13F73x6J203'),
+        }
+        self.assertEqual(len(offers),4)
+        self.assertEqual({o['id']:(o['amount_cents'],o['payment']['checkout_url']) for o in offers},expected)
+        llms=(ROOT/'veriproof/llms.txt').read_text()
+        for o in offers:
+            self.assertEqual(o['acceptance'],'scope_review_required')
+            self.assertEqual(o['currency'],'USD')
+            self.assertEqual(o['payment']['status'],'live_checkout_after_scope_acceptance')
+            self.assertTrue(o['payment']['scope_agreement_required'])
+            self.assertIsNone(o['delivery']['endpoint'])
+            self.assertFalse(o['delivery']['automated_live'])
+            self.assertIn(o['payment']['checkout_url'],llms)
+        self.assertIn('not an A2A-compatible endpoint',self.manifest['protocol_disclosure'])

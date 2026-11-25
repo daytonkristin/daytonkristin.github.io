@@ -2,7 +2,7 @@
   "schema": "veriproof-service-discovery-v1",
   "publisher": "VeriProof Systems",
   "canonical_site": "https://daytonkristin.github.io/veriproof/",
-  "protocol_disclosure": "Custom static discovery descriptor, not an A2A-compatible endpoint or automatic execution authorization. No live checkout or fulfillment API advertised.",
+  "protocol_disclosure": "Custom static discovery descriptor, not an A2A-compatible endpoint or automatic execution authorization. Existing hosted Stripe checkout links are available only after scope agreement. No live MPP, x402 or automated fulfillment API is advertised.",
   "offers": [
     {
       "name": "Assumption Drift & Policy Audit Pilot",
@@ -31,13 +31,111 @@
       },
       "payment": {
         "candidate_provider": "Stripe",
-        "checkout_url": null,
-        "status": "not_active_for_this_offer"
+        "checkout_url": "https://buy.stripe.com/7sYeVc3YV0ch13F73x6J203",
+        "status": "live_checkout_after_scope_acceptance",
+        "scope_agreement_required": true,
+        "payment_reference": "Use the agreed scope reference; do not enter confidential material."
       },
       "delivery": {
         "endpoint": null,
         "automated_live": false,
         "artifact": "private evidence-backed traceability report, synthetic counterexamples or scoped no-finding result, and recommended regression tests",
+        "transport": "agreed private delivery after acceptance"
+      }
+    },
+    {
+      "id": "python-defect-diagnosis",
+      "name": "Python Defect Diagnosis",
+      "amount_cents": 4900,
+      "currency": "USD",
+      "availability": "scope_review_only",
+      "acceptance": "scope_review_required",
+      "inputs": "non-sensitive summary initially; sanitized inputs after agreement",
+      "contact": "ailoopguard.support@gmail.com",
+      "intake": {
+        "method": "email",
+        "subject": "VERIPROOF SERVICE SCOPE python-defect-diagnosis",
+        "required_fields": [
+          "service_id",
+          "non_sensitive_scope_summary"
+        ],
+        "private_materials": "transfer method agreed after scope review"
+      },
+      "payment": {
+        "candidate_provider": "Stripe",
+        "checkout_url": "https://buy.stripe.com/9B628q9jf6AFbIj2Nh6J200",
+        "status": "live_checkout_after_scope_acceptance",
+        "scope_agreement_required": true,
+        "payment_reference": "Use the agreed scope reference; do not enter confidential material."
+      },
+      "delivery": {
+        "endpoint": null,
+        "automated_live": false,
+        "artifact": "Scoped defect diagnosis and recommended next steps",
+        "transport": "agreed private delivery after acceptance"
+      }
+    },
+    {
+      "id": "api-integration-diagnosis",
+      "name": "API Integration Diagnosis",
+      "amount_cents": 9900,
+      "currency": "USD",
+      "availability": "scope_review_only",
+      "acceptance": "scope_review_required",
+      "inputs": "non-sensitive summary initially; sanitized inputs after agreement",
+      "contact": "ailoopguard.support@gmail.com",
+      "intake": {
+        "method": "email",
+        "subject": "VERIPROOF SERVICE SCOPE api-integration-diagnosis",
+        "required_fields": [
+          "service_id",
+          "non_sensitive_scope_summary"
+        ],
+        "private_materials": "transfer method agreed after scope review"
+      },
+      "payment": {
+        "candidate_provider": "Stripe",
+        "checkout_url": "https://buy.stripe.com/4gM28qanj9MRh2D4Vp6J201",
+        "status": "live_checkout_after_scope_acceptance",
+        "scope_agreement_required": true,
+        "payment_reference": "Use the agreed scope reference; do not enter confidential material."
+      },
+      "delivery": {
+        "endpoint": null,
+        "automated_live": false,
+        "artifact": "Scoped integration diagnosis and recommended next steps",
+        "transport": "agreed private delivery after acceptance"
+      }
+    },
+    {
+      "id": "ai-workflow-reliability",
+      "name": "AI Workflow Reliability Assessment",
+      "amount_cents": 14900,
+      "currency": "USD",
+      "availability": "scope_review_only",
+      "acceptance": "scope_review_required",
+      "inputs": "non-sensitive summary initially; sanitized inputs after agreement",
+      "contact": "ailoopguard.support@gmail.com",
+      "intake": {
+        "method": "email",
+        "subject": "VERIPROOF SERVICE SCOPE ai-workflow-reliability",
+        "required_fields": [
+          "service_id",
+          "non_sensitive_scope_summary"
+        ],
+        "private_materials": "transfer method agreed after scope review"
+      },
+      "payment": {
+        "candidate_provider": "Stripe",
+        "checkout_url": "https://buy.stripe.com/28EdR80MJaQV5jV1Jd6J202",
+        "status": "live_checkout_after_scope_acceptance",
+        "scope_agreement_required": true,
+        "payment_reference": "Use the agreed scope reference; do not enter confidential material."
+      },
+      "delivery": {
+        "endpoint": null,
+        "automated_live": false,
+        "artifact": "Scoped workflow reliability assessment and recommendations",
         "transport": "agreed private delivery after acceptance"
       }
     }
